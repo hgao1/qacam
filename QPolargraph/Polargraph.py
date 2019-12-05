@@ -70,7 +70,6 @@ class Motors(QSerialDevice):
         logger.debug(' goto {} {}'.format(n1, n2))
         res= self.handshake('G:%d:%d' % (n1,n2)) 
         logger.debug(' received {}'.format(res))
-        self.send('G:%d:%d' % (n1, n2))
 
     def home(self):
         '''Move to home position'''
